@@ -1,12 +1,13 @@
-<div class="container">
+<div class="container text-center" data-controller="shorturl">
+  <h1 data-target="shorturl.heading"></h1>
   <div class="p-5">
     <div class="card">
       <div class="card-body">
-        <%= form_for @link, remote: true do |form| %> 
-          <h5 class="card-title"> Enter a URL to shorten</h5>
-          <%= form.text_field :original_url, class: "form-control", placeholder:"Enter URL..." %> 
-          <%= form.submit "Shorten", class:"btn btn-primary mt-2" %> 
-        <% end %>        
+        <%= form_for @link, remote: true do |form| %>
+        <h3 data-target="shorturl.enterLink"></h3>
+        <%= form.text_field :original_url, class: "form-control", data: { target: "shorturl.input" },
+        placeholder:"Enter URL..." %> <br />
+        <%= form.submit "Make it Short!", data: { target: "shorturl.button" } %> <% end %>
       </div>
       <div id="short-link"></div>
     </div>
