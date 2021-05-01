@@ -2,12 +2,20 @@ require "rails_helper"
 
 RSpec.describe Link do
 
-  it "always has an original URL and a lookup code" do
+  it "is valid if it has an original URL and a lookup code" do
     link = Link.new(
       original_url: "https://www.favouritewebsite.com/articles/how-to-cook",
       lookup_code: "1234567"
     )
     expect(link.valid?).to be true
+  end
+
+  it "is invalid if the URL is not formatted properly" do
+    link = Link.new(
+      original_url: "adhghajksdhakjdh",
+      lookup_code: "1234567"
+    )
+    expect(link.valid?).to be false
   end
 
   it "is invalid if it doesnot have a lookup code" do
