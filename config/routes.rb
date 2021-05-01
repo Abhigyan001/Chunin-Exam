@@ -1,5 +1,5 @@
 Rails.application.routes.draw do  
-  
-  post "/links" => 'links#create'
   root 'home#index'
+  post "/links" => 'links#create'
+  get "/:lookup_code" => 'links#show'
 end
