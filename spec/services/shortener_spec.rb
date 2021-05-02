@@ -1,27 +1,26 @@
-require "rails_helper"
+require 'rails_helper'
 
 RSpec.describe Shortener do
-
-  it "shortens a given URL to a 7 character lookup code" do
-    url = "https://www.favouritewebsite.com/articles/how-to-cook"
+  it 'shortens a given URL to a 7 character lookup code' do
+    url = 'https://www.favouritewebsite.com/articles/how-to-cook'
     shortener = Shortener.new(url)
     expect(shortener.lookup_code.length).to eq(7)
   end
 
-  it "gives each URL its own lookup code" do
-    url = "https://www.favouritewebsite.com/articles/how-to-cook"
+  it 'gives each URL its own lookup code' do
+    url = 'https://www.favouritewebsite.com/articles/how-to-cook'
     shortener = Shortener.new(url)
-    code_1 = shortener.lookup_code
+    code1 = shortener.lookup_code
 
-    url = "https://www.favouritewebsite.com/articles/how-to-bake"
+    url = 'https://www.favouritewebsite.com/articles/how-to-bake'
     shortener = Shortener.new(url)
-    code_2 = shortener.lookup_code
+    code2 = shortener.lookup_code
 
-    expect(code_2).not_to eq(code_1)
+    expect(code2).not_to eq(code1)
   end
 
-  it "generates a Link record with a unique lookup code" do
-    url = "https://www.favouritewebsite.com/articles/how-to-cook"
+  it 'generates a Link record with a unique lookup code' do
+    url = 'https://www.favouritewebsite.com/articles/how-to-cook'
     shortener = Shortener.new(url)
     link = shortener.generate_short_link
     expect(link.valid?).to be true
@@ -29,5 +28,4 @@ RSpec.describe Shortener do
     link2 = shortener.generate_short_link
     expect(link2.valid?).to be true
   end
-
 end

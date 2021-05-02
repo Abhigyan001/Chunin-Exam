@@ -40,6 +40,8 @@ To get this project up and running locally, you must already have ruby and neces
 9. Open a new terminal at the same location (Chunin-Exam folder) and Run `bin/webpack-dev-server`.
 10. Now open your browser and at the address bar, type `localhost:3000`
 
+### Run Tests
+1. Open a new terminal at the project location (Chunin-Exam folder) and Run `rspec`.
 
 ## Author Details::
 
