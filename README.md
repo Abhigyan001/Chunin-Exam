@@ -1,100 +1,63 @@
-# Helpjuice Chunin Exam
+#  Chunin Exam Submission
 
-Welcome to the Helpjuice code challenge. This repository includes a new Rails app used for assessment and testing purposes only.
+URL Shortener app by Abhigyan Mahanta.
 
-## Context
+## Usage
 
-[Helpjuice](https://www.helpjuice.com/) provides a reasonable overview and description of who are we and what we do.
+This web app can be used to shorten your links just like bitly.com and tinurl.com.
 
-Helpjuice empowers large and small companies (such as Amazon.com, Hertz, Virgin Mobile, Shipt.com, Philips, US Government, and thousands of others) to deliver instant support using our software.
+![screenshot](./app/assets/images/ss1.PNG)
 
-We're a smaller, yet growing software company, where everyone wears multiple hats. It's a team of excellent people, who are all willing to help each other because it's the way we work / our culture.
 
-We care about our customers and are a very transparent company in how we build software (e.g.: our product roadmap is public & customer-driven)
+# What it does
 
+- Users can enter any link to shorten it and make it less clunky
+- Enter the URL in the input box and click on 'Make it short' button to get the shortened link.
+
+## Build-With
+
+- Ruby -v 2.6.6
+- Rails -v 5.2.4.4
+- Stimulus
+- VScode
 
 ## Getting Started
 
-```bash
-# Start your Rails server
-rails server
+### Prerequisites
 
-# In a separate tab
-bin/webpack-dev-server
-```
+To get this project up and running locally, you must already have ruby and necessary gems installed on your computer
 
-## Tasks
+**To get this project set up on your local machine, follow these simple steps:**
 
-### 1. Build a URL shoretner app
+1. Open Terminal.
+2. Navigate to your desired location to download the contents of this repository.
+3. Copy and paste the following code into the Terminal: git clone https://github.com/Abhigyan001/Chunin-Exam.git
+4. Run ```cd Chunin-Exam```.
+5. Run ```yarn add stimulus```.
+6. Run ```bundle install``` to get the necesary gems.
+7. Run `rails db:migrate`.
+8. Run `rails s -p 3000`
+9. Open a new terminal at the same location (Chunin-Exam folder) and Run `bin/webpack-dev-server`.
+10. Now open your browser and at the address bar, type `localhost:3000`
 
-A URL shortener is an online application that converts a regular URL into its condensed format.
+### Run Tests
+1. Open a new terminal at the project location (Chunin-Exam folder) and Run `rspec`.
 
-The user only has to copy the full URL of a website and paste it into the URL shortening tool to come up with an abbreviated version that is around 10 to 20 characters long.
+## Author Details::
 
-Example:
+👤 ABHIGYAN Mahanta
 
-Regular URL - http://www.nytimes.com/2012/08/09/us/more-casinos-and-internet-gambling-threaten-shakopee-tribe.html?_r=1&hp
+- Github: [@Abhigyan001](https://github.com/Abhigyan001)
+- Twitter: [@abhigyan_001](https://twitter.com/abhigyan_001)
+- LinkedIn: [Abhigyan](https://www.linkedin.com/in/abhigyanmahanta/)
 
-Shortened URL - http://`your-domain`/P7eg6B
+## Show your support
 
-Shortened URL then redirects to the original URL.
+Give ⭐ Star me on GitHub — it helps!
 
-**Plus points for challengers are able to track as much of analytics as possible!**
+## 📝 License
 
-### 2. Stimulus
+This project is [MIT](lic.url) licensed.   
 
-Install and use stimulus to show off some of that JavaScript magic.
 
-Please try to put as much of your JavaScript into Stimulus controllers as possible!
 
-### 3. Specs
-
-Install and configure RSpec and Capybara to test your coode.
-
-**Plus points for challengers with best code coverage!**
-
-### 4. Write documentation
-
-Rewrite this readme to describe your app and explain your approuch. Give as much info to the reviewers as possible!
-
-## Tips
-
-- Submit your PR as you would in a professional environment
-- Keep your commit history and your diffs clean
-- Try to write clean code
-
-## How do I submit a Pull Request?
-
-Since this a public repository, submitting a Pull Request will not be the same as when you're a collaborator. The instructions below will help you push the changes to the repo.
-
-- Fork the project to your personal Github.
-- Clone the challenge to your local from your new forked repo in your personal git account.
-
-  ```
-    git clone <forked account>
-
-    example: git clone https://github.com/EmirVatric/Chunin-Exam
-  ```
-
-- Any changes made in the original repository should not be synced to your forked repository. The following commands enable us to track the original repository as a remote of the fork.
-
-   ```
-     git remote add --track master upstream https://github.com/EmirVatric/Chunin-Exam.git
-     git fetch upstream
-   ```
-
-- Create a new branch for your changes.
-
-   ```
-    git checkout -b <your-branch-name> upstream/master
-   ```
-
-- Make your changes, stage, and commit files necessary.
-- Push the changes to remote.
-
-  ```
-   git push -u origin <your-branch-name> origin
-  ```
-
-- You can now go to Github, and submit a PR with necessary details.
-- Happy Coding! Please don't hesitate to shoot an email to the recruitment team if you have any issues while pushing the code.
